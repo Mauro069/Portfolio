@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  color: #222222;
+}
+
+.container {
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(255, 255, 255, 0) 0deg,
+    #ffffff 0.62deg,
+    rgba(255, 255, 255, 0) 360deg
+  );
+}
