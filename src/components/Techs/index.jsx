@@ -9,7 +9,9 @@ const Techs = () => {
       <div className={styles.title}>
         <h4>Stack Tecnológico</h4>
         <div className={styles.tech}>
-          {Tecnologias.map (({img, desc}) => <Fragment> {img} </Fragment>)}
+          {Tecnologias.map (({img, desc}, key) => (
+            <Fragment key={key}> {img} </Fragment>
+          ))}
         </div>
       </div>
     </div>
