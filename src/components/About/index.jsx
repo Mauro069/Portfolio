@@ -1,12 +1,27 @@
 import React from 'react';
-import img from '../../Assets/Img.png'
-import styles from './styles.module.scss'
+import img from '../../Assets/Img.png';
+import Contact from '../Contact';
+
+import {useMediaQuery} from '../../Hooks/useMediaQuery';
+
+import styles from './styles.module.scss';
 
 const About = () => {
+  const breakpoint = useMediaQuery ('(max-width: 1000px)');
+
   return (
     <div className={styles.container}>
-      <img src={img} alt="Mauro" />
-      <h2>¡Hola! Soy Mauro, Frontend developer y Diseñador gráfico 🎨</h2>
+      <div className={styles.imgDesktop}>
+        {breakpoint ? null : <Contact />}
+        <img src={img} alt="Mauro" />
+      </div>
+      <h2>
+        ¡Hola! Soy Mauro,
+        <br />
+        Frontend developer y
+        <br />
+        Diseñador gráfico 🎨
+      </h2>
     </div>
   );
 };
